@@ -7,8 +7,9 @@ public class Automobile {
 	
 	public void accelera() {
 		
-		if (velocità<=190)
+		if (velocità<=190 && carburante>0)
 			velocità+=10; // mi incrementa di 10
+		
 	}
 		
 	public void decelera() {
@@ -20,10 +21,10 @@ public class Automobile {
 			
 	public void visualizzaDati() {
 		
-		System.out.println(" velocità attuale :" + velocità + "km/h");
-		System.out.println("carburante: " + carburante + "l");
-		System.out.println("consumo medio: " + consumoMedio + "km/l" );
-		System.out.println("km percorsi: " + totKmPercorsi + "km");
+		System.out.println("velocità attuale :" + velocità + " km/h");
+		System.out.println("carburante: " + carburante + " l");
+		System.out.println("consumo medio: " + consumoMedio + " km/l" );
+		System.out.println("km percorsi: " + totKmPercorsi + " km");
 	}
 	
 	public void aggiorna() { //simula il passaggio di 1h
@@ -33,8 +34,8 @@ public class Automobile {
 		totKmPercorsi+=kmPercorsi1h; //aggiunge al totale i km percorsi in un ora
 		carburante-=kmPercorsi1h/consumoMedio; //scalo l da carburante (in un ora)
 		
-		
-	
+		if(carburante<=0)//non c'è carburante la macchina si ferma
+			velocità=0;
 }
 
 	}		

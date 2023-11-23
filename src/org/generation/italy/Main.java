@@ -23,10 +23,12 @@ public class Main {
 		auto2.consumoMedio=23;
 		auto2.totKmPercorsi=0;
 		
-		System.out.println("Auto1: " );
+		do {
+		
+		System.out.println("\n\n\n\n-Auto1: " );
 		auto1.visualizzaDati();
 		
-		System.out.println("Auto2: ");
+		System.out.println("\n-Auto2: ");
 		auto2.visualizzaDati();
 		
 		System.out.println("Quale auto vuoi guidare? (1/2)");
@@ -42,8 +44,14 @@ public class Main {
 			autoCorrente.accelera();
 		else if (risposta.equals("decelerare"))
 			autoCorrente.decelera();
+		auto2.aggiorna();
+		auto1.aggiorna();
 		
 		
+		System.out.println("vuoi continuare?(s/n)");
+		risposta=sc.nextLine();
+		
+		}while(risposta.equals("s"));
 			
 			
 		

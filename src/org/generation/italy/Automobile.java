@@ -1,6 +1,6 @@
 package org.generation.italy;
 
-public class Automobili {
+public class Automobile {
 
 	int velocit‡;
 	float carburante, consumoMedio, totKmPercorsi; //disponibilit‡Carburante consumoMedio kmPercorsi

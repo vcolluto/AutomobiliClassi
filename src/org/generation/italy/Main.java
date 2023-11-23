@@ -31,19 +31,26 @@ public class Main {
 		System.out.println("\n-Auto2: ");
 		auto2.visualizzaDati();
 		
-		System.out.println("Quale auto vuoi guidare? (1/2)");
+		System.out.println("\nQuale auto vuoi guidare? (1/2/nessuna)");
 		risposta=sc.nextLine();
 		if(risposta.equals("1"))
 			autoCorrente=auto1;
 		else if	(risposta.equals("2"))
 			autoCorrente=auto2;
+		else if	(risposta.equals("nessuna"));
 		
-		System.out.println("Vuoi accelerare o decelerare?");
+		else System.out.println("risposta non valida");
+		
+		if(risposta.equals("1") || risposta.equals("2")) {
+			
+		System.out.println("Vuoi accelerare, decelerare?");
 		risposta=sc.nextLine();
 		if(risposta.equals("accelerare"))
 			autoCorrente.accelera();
 		else if (risposta.equals("decelerare"))
 			autoCorrente.decelera();
+		
+		}	
 		auto2.aggiorna();
 		auto1.aggiorna();
 		

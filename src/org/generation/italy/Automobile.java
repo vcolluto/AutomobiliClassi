@@ -66,7 +66,10 @@ public class Automobile {
 		int kmPercorsi1h=velocità; //in un ora ho percorso un n di km pari alla velocità
 		
 		totKmPercorsi+=kmPercorsi1h; //aggiunge al totale i km percorsi in un ora
-		carburante-=kmPercorsi1h/consumoMedio; //scalo l da carburante (in un ora)
+		if (kmPercorsi1h/consumoMedio<=carburante)	
+			carburante-=kmPercorsi1h/consumoMedio; //scalo l da carburante (in un ora)
+		else
+			carburante=0;	//se il consumo dell'ultima ora è maggior di quello che ho nel serbatoio => il carburante va a zero
 		
 		if(carburante<=0)//non c'è carburante la macchina si ferma
 			velocità=0;

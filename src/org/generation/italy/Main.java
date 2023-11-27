@@ -14,7 +14,11 @@ public class Main {
 		// ogni volta che si scrive "new Automobile(...)" si esegue il metodo costruttore
 		Automobile auto1 = new Automobile(30,20); 	//crea una nuova automobile con carburante=30 e consumo=20
 		Automobile auto2 = new Automobile(50,23);   //crea una nuova automobile con carburante=50 e consumo=23
-		Automobile autoCorrente = auto1;
+	
+		
+		
+		Automobile autoCorrente = auto1;		
+			
 		String risposta;
 
 		/* non lo posso più fare perché gli attributi sono "private"

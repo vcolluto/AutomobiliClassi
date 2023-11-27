@@ -29,7 +29,7 @@ public class Automobile {
 			carburante=0;		//valore di default
 		}
 		else
-			this.carburante=carburante;
+			this.carburante=carburante;		//assegno all'attributo (this.carburante) il valore del parametro (carburante)
 		
 		if (consumoMedio<=0) {
 			System.out.println("consumo medio non valido");
@@ -38,12 +38,13 @@ public class Automobile {
 		else
 			this.consumoMedio=consumoMedio;	//this.consumoMedio è l'attributo; consumoMedio è il parametro
 			
-		velocità=0;
-		totKmPercorsi=0;
+		velocità=0;			//tutte le nuove automobili avranno valore iniziale di velocità=0
+		totKmPercorsi=0;	//tutte le nuove automobili avranno valore iniziale di totKmPercorsi=0
 	}
 	
 	
-	public void accelera() {		
+		
+	public void accelera() {			//public: visibile a tutte le classi	
 		if (velocità<=190 && carburante>0)
 			velocità+=10; // mi incrementa di 10		
 	}
